@@ -11,7 +11,6 @@ var socketIO = require('socket.io');
 var mongoose = require('mongoose');
 
 
-
 // start mongoose
 mongoose.connect('mongodb://localhost/sit');
 var db = mongoose.connection;
