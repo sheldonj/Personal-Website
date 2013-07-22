@@ -54,7 +54,7 @@ db.once('open', function callback () {
 
 
 	// route index.html
-	app.get('/', function(req, res){
+	app.get('*', function(req, res){
 	  res.sendfile( path.join( __dirname, '../app/index.html' ) );
 	});
 

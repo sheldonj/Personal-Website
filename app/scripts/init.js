@@ -8,7 +8,7 @@
         baseUrl: "/scripts",
 
         /* starting point for application */
-        deps: ['backbone.marionette', 'bootstrap', 'marionette.handlebars', 'main'],
+        deps: ['backbone.marionette', 'bootstrap', 'marionette.handlebars', 'app/main'],
 
 
         shim: {
@@ -45,6 +45,7 @@
             /* Alias text.js for template loading and shortcut the templates dir to tmpl */
             text: '../bower_components/requirejs-text/text',
             tmpl: "../templates",
+            templates: "app/templates",
 
             /* handlebars from the require handlerbars plugin below */
             handlebars: '../bower_components/require-handlebars-plugin/Handlebars',
@@ -55,7 +56,10 @@
             hbs: '../bower_components/require-handlebars-plugin/hbs',
 
             /* marionette and handlebars plugin */
-            'marionette.handlebars': '../bower_components/backbone.marionette.handlebars/backbone.marionette.handlebars'
+            'marionette.handlebars': '../bower_components/backbone.marionette.handlebars/backbone.marionette.handlebars',
+
+            /*communicator*/
+            communicator: 'utils/communicator'
         },
 
         hbs: {

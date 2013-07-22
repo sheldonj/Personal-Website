@@ -152,23 +152,23 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        compass: {
-            options: {
-                sassDir: '<%= yeoman.app %>/styles',
-                cssDir: '.tmp/styles',
-                imagesDir: '<%= yeoman.app %>/images',
-                javascriptsDir: '<%= yeoman.app %>/scripts',
-                fontsDir: '<%= yeoman.app %>/styles/fonts',
-                importPath: 'app/bower_components',
-                relativeAssets: true
-            },
-            dist: {},
-            server: {
-                options: {
-                    debugInfo: true
-                }
-            }
-        },
+//        compass: {
+//            options: {
+//                sassDir: '<%= yeoman.app %>/styles',
+//                cssDir: '.tmp/styles',
+//                imagesDir: '<%= yeoman.app %>/images',
+//                javascriptsDir: '<%= yeoman.app %>/scripts',
+//                fontsDir: '<%= yeoman.app %>/styles/fonts',
+//                importPath: 'app/bower_components',
+//                relativeAssets: true
+//            },
+//            dist: {},
+//            server: {
+//                options: {
+//                    debugInfo: true
+//                }
+//            }
+//        },
         requirejs: {
             dist: {
                 // Options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
@@ -294,7 +294,7 @@ module.exports = function (grunt) {
             'coffee:dist',
             'createDefaultTemplate',
             'handlebars',
-            'compass:server',
+            //'compass:server',
             'livereload-start',
             'connect:livereload',
             'open',
@@ -312,7 +312,7 @@ module.exports = function (grunt) {
             'coffee:dist',
             'createDefaultTemplate',
             'handlebars',
-            'compass:server',
+            //'compass:server',
             'express:dev',
             'livereload-start',
             'open',
@@ -325,17 +325,17 @@ module.exports = function (grunt) {
         'coffee',
         'createDefaultTemplate',
         'handlebars',
-        'compass',
+        //'compass',
         'connect:test',
         'mocha'
     ]);
 
     grunt.registerTask('build', [
         'clean:dist',
-        'coffee',
+        //'coffee',
         'createDefaultTemplate',
         'handlebars',
-        'compass:dist',
+        //'compass:dist',
         'useminPrepare',
         'requirejs',
         'imagemin',
