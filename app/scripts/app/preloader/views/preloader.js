@@ -8,7 +8,7 @@ function(Backbone, Communicator, _, Templates){
     return Backbone.Marionette.Layout.extend({
 
         template: Templates.preloader,
-        className: 'preloader-container',
+        className: 'preloader-container region-container',
         regions: {}
 
     });

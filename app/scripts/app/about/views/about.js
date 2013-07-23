@@ -11,8 +11,15 @@ define([ 'backbone', 'communicator', 'underscore', 'templates'],
             className: 'about-container region-container',
 
             regions: {
-            }
+            },
 
+            onRender: function(){
+                console.log('about on render');
+            },
+
+            onShow: function(){
+                console.log('about on show');
+            }
 
         });
 

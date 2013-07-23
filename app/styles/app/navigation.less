@@ -7,8 +7,34 @@
 
 
   .nav-container{
-    background: @black;
     height: 40px;
+    text-align: right;
+
+    #nav-links {
+
+      margin: 10px;
+
+      a{
+        .jafBold();
+        color: @white;
+        font-size: @baseFontSize - 6;
+        text-transform: uppercase;
+        margin-right: 20px;
+        border-bottom: none;
+
+        &:last-child{
+          margin-right: 10px;
+        }
+
+        &:hover{
+          color: darken(@white, 40%);
+          text-decoration: none;
+        }
+
+      }
+
+    }
+
   }
 
 }

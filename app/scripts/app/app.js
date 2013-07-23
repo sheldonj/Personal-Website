@@ -34,7 +34,7 @@ define(
                     //Load Preloader UI:
                     require(['app/preloader/views/preloader'],function(PreloaderView) {
                         var preloaderView = new PreloaderView();
-                        App.main.show(preloaderView);
+                        App.main.loadView(preloaderView);
                     });
 
                     //Preload Assets

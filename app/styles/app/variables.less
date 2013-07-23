@@ -5,6 +5,7 @@
 
 // Global values
 // --------------------------------------------------
+@jamesWhite: #fff;
 @jamesBlack: #000;
 @jamesGray : #333333;
 @jamesPink : #ff358b;
@@ -38,24 +39,37 @@
 // Scaffolding
 // -------------------------
 @bodyBackground:        @black;
-@textColor:             @grayDark;
+@textColor:             @white;
 
 
 // Links
 // -------------------------
-@linkColor:             #08c;
-@linkColorHover:        darken(@linkColor, 15%);
+@linkColor:             @grayLighter;
+@linkColorHover:        darken(@linkColor, 70%);
+
+
+.jafRegular(){
+  font-family: "jaf-facitweb",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.jafBold(){
+  font-family: "jaf-facitweb",sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sansFontFamily:        "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
-@baseFontSize:          14px;
+@baseFontSize:          18px;
 @baseFontFamily:        @sansFontFamily;
-@baseLineHeight:        20px;
+@baseLineHeight:        30px;
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily

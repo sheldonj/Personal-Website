@@ -3,6 +3,13 @@ body, html {
   width: 100%;
   height: 100%;
   position: relative;
+
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+
+  font-style: normal;
+  font-weight: 500;
+
 }
 
 #wrapper{
@@ -18,6 +25,41 @@ body, html {
    left: 0px;
    width: 100%;
    height: 100%;
+   overflow: hidden;
+
+   .background-pattern{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background: url('/images/square_bg.png');
+     z-index: -1;
+   }
+
+   .section-container, .content-blocks{
+     display: table;
+     width: 100%;
+     height: 100%;
+
+     .content-block{
+       display: table-cell;
+       vertical-align: middle;
+       text-align: center;
+
+       header{
+         h1{
+           .jafBold();
+           color: @white;
+           font-size: @baseFontSize * 3.5;
+           //text-transform: uppercase;
+           text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.3);
+         }
+         margin-bottom: @baseLineHeight;
+       }
+
+     }
+
+   }
+
  }
 
 }

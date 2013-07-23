@@ -11,8 +11,15 @@ define([ 'backbone', 'communicator', 'underscore', 'templates'],
             className: 'contact-container region-container',
 
             regions: {
-            }
+            },
 
+            onRender: function(){
+                console.log('contact on render');
+            },
+
+            onShow: function(){
+                console.log('contact on show');
+            }
 
         });
 

@@ -108,7 +108,7 @@ define(['communicator', 'underscore'], function(Communicator, _){
             promise.done(function(){
                 cfg.success();
             }).fail(function(){
-                    cfg.fail();
+                cfg.fail();
             });
         },
 

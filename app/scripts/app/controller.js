@@ -52,6 +52,16 @@ define(['backbone', 'communicator'],
                 });
             },
 
+            play: function(){
+                var self = this;
+                self._before(function(){
+                    require(['app/play/views/play'], function(PlayView) {
+                        var playView = new PlayView();
+                        self.contentRegion.loadView(playView);
+                    });
+                });
+            },
+
             contact: function(){
                 var self = this;
                 self._before(function(){
@@ -74,7 +84,7 @@ define(['backbone', 'communicator'],
                //Load Navigation Here.
                 require(['app/nav/views/nav'], function(NavView) {
                     var navView = new NavView();
-                    self.navRegion.loadView(navView);
+                    self.navRegion.show(navView);
                 });
 
             }

@@ -10,6 +10,7 @@ define(['backbone', 'communicator'], function(Backbone, Communicator) {
             'home'     : 'home',
             'about'      : 'about',
             'work'      : 'work',
+            'play'      : 'play',
             'skills'      : 'skills',
             'contact'      : 'contact'
         },

@@ -41,6 +41,11 @@ define(['backbone', 'communicator', 'underscore'], function(Backbone, Communicat
                 return self.redirection(path);
             });
 
+            $(document).on('click', "a.internal", function(e){
+                e.preventDefault();
+                Communicator.cmds.execute("navigation:redirect", $(this).attr("href"));
+            });
+
             return true;
 
         },
