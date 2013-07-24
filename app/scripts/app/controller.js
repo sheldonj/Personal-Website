@@ -18,9 +18,11 @@ define(['backbone', 'communicator'],
                 self._before(function(){
                     //create home subroutes/controller
                     require(['app/home/router', 'app/home/controller'], function(HomeRouter, Controller) {
+                        var controller = new Controller(self.options)
                         new HomeRouter("home", {
-                            controller: new Controller(self.options)
+                            controller: controller
                         });
+                        controller.about();
                     });
                 });
 

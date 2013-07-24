@@ -6,15 +6,13 @@ define(['backbone', 'communicator', 'app/home/views/home'],
         return Backbone.Marionette.Controller.extend({
 
             initialize: function(options){
+                var self = this;
                 console.log('home controller init');
-                this.contentRegion = options.contentRegion;
-                this.navRegion = options.navRegion;
-                this.parentView = new ParentView();
-
-                this.about();
+                self.contentRegion = options.contentRegion;
+                self.navRegion = options.navRegion;
+                self.parentView = new ParentView();
 
             },
-
 
             _before: function(callback){
 
