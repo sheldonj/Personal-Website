@@ -14,11 +14,11 @@ define([ 'backbone', 'communicator', 'underscore', 'templates'],
             },
 
             onRender: function(){
-                console.log('about on render');
+               // console.log('about on render');
             },
 
             onShow: function(){
-                console.log('about on show');
+                //console.log('about on show');
             }
 
         });

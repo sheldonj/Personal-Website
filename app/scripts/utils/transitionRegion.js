@@ -8,7 +8,7 @@ define(['backbone', 'communicator', 'underscore'],
                 this.loadedViews = [];
             },
 
-            loadView: function(view){
+            loadView: function(view, callback){
 
                 var self = this;
 
@@ -49,9 +49,14 @@ define(['backbone', 'communicator', 'underscore'],
 
                     self.loadedViews = [];
                     self.loadedViews.push(view);
+                    self.currentView = view;
 
                     Backbone.Marionette.triggerMethod.call(view, "show");
                     Backbone.Marionette.triggerMethod.call(self, "show", view);
+
+                    if(!_.isUndefined(callback)){
+                        callback();
+                    }
 
                 });
 

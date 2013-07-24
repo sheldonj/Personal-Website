@@ -1,0 +1,315 @@
+.grid-4 {
+ width:260px;
+}
+.grid-4.large {
+  //width:325px;
+}
+.list-hex-grid {
+  margin-top:55px;
+  margin-bottom:55px;
+  font-size:0px;
+  word-spacing:1px;
+  word-spacing:0;
+//
+//  -webkit-transform: perspective(680px) rotateY(0deg) rotateX(15deg) rotateZ(0deg);
+//  -moz-transform: perspective(680px) rotateY(0deg) rotateX(15deg) rotateZ(0deg);
+//  -ms-transform: perspective(680px) rotateY(0deg) rotateX(15deg) rotateZ(0deg);
+//  -o-transform: perspective(680px) rotateY(0deg) rotateX(15deg) rotateZ(0deg);
+//  transform: perspective(680px) rotateY(0deg) rotateX(15deg) rotateZ(0deg);
+
+
+
+  img {
+    display:-moz-inline-stack;
+    display:inline-block;
+    vertical-align:middle;
+    vertical-align:top;
+    *vertical-align:auto;
+    zoom:1;
+    *display:inline;
+  }
+
+  div.hex {
+    margin-right: 10px;
+    font-size:16px;
+    display:-moz-inline-stack;
+    display:inline-block;
+    vertical-align:middle;
+    *vertical-align:auto;
+    zoom:1;
+    *display:inline;
+    margin-top:37px;
+    margin-bottom:37px;
+    float:none;
+    position:relative;
+    z-index:10;
+    .scale(0.9);
+    .transition(1s);
+
+    &:hover{
+      .scale(1);
+    }
+
+
+    > a, > div {
+      height:110px;
+      line-height:220px;
+      font-size:18px;
+      word-spacing:1px;
+
+      .transition(none 1s);
+
+      background-color:whitesmoke;
+      background-repeat:no-repeat;
+      background-position:50% 50%;
+
+      .background-size(auto 220px);
+
+      text-align:center;
+      display:block;
+      border:none;
+      color:#ffffff;
+      -webkit-backface-visibility:hidden;
+    }
+
+    .hex-1 .after, .hex-2 .after {
+      z-index:-1;
+    }
+
+    .inner {
+      top:-55px;
+      display:-moz-inline-stack;
+      display:inline-block;
+      vertical-align:middle;
+      *vertical-align:auto;
+      zoom:1;
+      *display:inline;
+      white-space:normal;
+      z-index:20;
+      position:relative;
+      max-width:80%;
+      color:#ffffff !important;
+      font-family:"freightsans_regular", sans-serif;
+      font-weight:300;
+      text-transform:uppercase;
+      letter-spacing:3px;
+      line-height:22px;
+
+
+      img {
+        display:-moz-inline-stack;
+        display:inline-block;
+        vertical-align:middle;
+        *vertical-align:auto;
+        zoom:1;
+        *display:inline;
+      }
+    }
+
+    .hex-1:before {
+      height:220px;
+      width:220px;
+
+
+      .rotate(-60deg);
+      .translate(-110px,0);
+
+
+      content:'';
+      position:absolute;
+      background:inherit;
+      background:inherit;
+      left:0;
+      z-index:-1;
+
+      -webkit-transform-origin:0 0;
+      -moz-transform-origin:0 0;
+      -ms-transform-origin:0 0;
+      -o-transform-origin:0 0;
+      transform-origin:0 0;
+    }
+
+    .hex-2:before {
+      height:220px;
+      width:220px;
+
+
+      .rotate(60deg);
+      .translate(40px,40px);
+
+      content:'';
+      position:absolute;
+      background:inherit;
+      background:inherit;
+      left:0;
+      z-index:-1;
+      bottom:0;
+    }
+
+    p {
+      color:#ffffff;
+      font-size:16px;
+    }
+
+    .hex-1 {
+      position:absolute;
+      height:100%;
+      width:100%;
+      top:0;
+      left:0;
+      z-index:-2;
+      z-index:-1;
+      overflow:hidden;
+      background:inherit;
+
+      -webkit-backface-visibility:hidden;
+
+      .transform(60deg);
+
+
+    }
+
+    .hex-2 {
+      position:absolute;
+      height:100%;
+      width:100%;
+      top:0;
+      left:0;
+      z-index:-2;
+      overflow:hidden;
+      background:inherit;
+
+      -webkit-backface-visibility:hidden;
+
+      .transform(-60deg);
+    }
+
+    .after {
+
+
+      .transition(none 1s);
+
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      z-index:15;
+      background:#16a6b6;
+    }
+  }
+
+}
+
+
+
+.list-hex-grid.large div.hex {
+  margin-top:37px;
+  margin-top:47px;
+  margin-bottom:37px;
+  margin-bottom:47px;
+  > a, > div {
+    height:150px;
+    line-height:300px;
+
+    .background-size(auto 300px);
+  }
+  .inner {
+    top:-75px;
+  }
+  .hex-1:before {
+    height:300px;
+    width:300px;
+
+    .rotate(-60deg);
+    .translate(-150px,0)
+
+  }
+  .hex-2:before {
+    height:300px;
+    width:300px;
+
+    .rotate(60deg);
+    .translate(55px,55px);
+  }
+}
+
+.list-hex-grid.mid div.hex {
+  margin-top:37px;
+  margin-top:40px;
+  margin-bottom:37px;
+  margin-bottom:40px;
+  width:220px;
+  > a, > div {
+    height:127px;
+    line-height:254px;
+
+    .background-size(auto 260px);
+
+  }
+  .inner {
+    top:-63.5px;
+  }
+  .hex-1:before {
+    height:254px;
+    width:254px;
+
+    -webkit-transform:rotate(-60deg) translate(-127px,0);
+    -moz-transform:rotate(-60deg) translate(-127px,0);
+    -ms-transform:rotate(-60deg) translate(-127px,0);
+    -o-transform:rotate(-60deg) translate(-127px,0);
+    transform:rotate(-60deg) translate(-127px,0);
+
+  }
+  .hex-2:before {
+    height:254px;
+    width:254px;
+
+    -webkit-transform:rotate(60deg) translate(47px,47px);
+    -moz-transform:rotate(60deg) translate(47px,47px);
+    -ms-transform:rotate(60deg) translate(47px,47px);
+    -o-transform:rotate(60deg) translate(47px,47px);
+    transform:rotate(60deg) translate(47px,47px);
+  }
+}
+
+.list-hex-grid.small div.hex {
+  margin-top: 37px;
+  margin-bottom: 37px;
+  width: 172px;
+  margin-top: 33px;
+  margin-bottom: 33px;
+}
+
+.list-hex-grid.small div.hex > a,
+.list-hex-grid.small div.hex > div {
+  height: 99px;
+  line-height: 198px;
+}
+
+.list-hex-grid.small div.hex .inner {
+  top: -49.5px;
+}
+
+.list-hex-grid.small div.hex .hex-1:before,
+.list-hex-grid.small div.hex .hex-2:before {
+  height: 198px;
+  width: 198px;
+}
+
+.list-hex-grid.small div.hex .hex-1:before {
+  -webkit-transform: rotate(-60deg) translate(-99px, 0);
+  -moz-transform: rotate(-60deg) translate(-99px, 0);
+  -ms-transform: rotate(-60deg) translate(-99px, 0);
+  -o-transform: rotate(-60deg) translate(-99px, 0);
+  transform: rotate(-60deg) translate(-99px, 0);
+}
+
+.list-hex-grid.small div.hex .hex-2:before {
+  -webkit-transform: rotate(60deg) translate(36px, 36px);
+  -moz-transform: rotate(60deg) translate(36px, 36px);
+  -ms-transform: rotate(60deg) translate(36px, 36px);
+  -o-transform: rotate(60deg) translate(36px, 36px);
+  transform: rotate(60deg) translate(36px, 36px);
+}
+

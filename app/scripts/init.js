@@ -26,6 +26,11 @@
             bootstrap: {
                 deps: ['jquery'],
                 exports: 'jquery'
+            },
+
+            'backbone.marionette' : {
+                exports : 'Backbone.Marionette',
+                deps : ['underscore', 'backbone', 'jquery']
             }
         },
 
@@ -35,6 +40,7 @@
             underscore: '../bower_components/underscore-amd/underscore',
 
             /* alias all marionette libs */
+            //'marionette': '../bower_components/backbone.marionette/lib/core/amd/backbone.marionette',
             'backbone.marionette': '../bower_components/backbone.marionette/lib/core/amd/backbone.marionette',
             'backbone.wreqr': '../bower_components/backbone.wreqr/lib/amd/backbone.wreqr', 
             'backbone.babysitter': '../bower_components/backbone.babysitter/lib/amd/backbone.babysitter',
@@ -59,7 +65,9 @@
             'marionette.handlebars': '../bower_components/backbone.marionette.handlebars/backbone.marionette.handlebars',
 
             /*communicator*/
-            communicator: 'utils/communicator'
+            communicator: 'utils/communicator',
+
+            subrouter :   'vendor/backbone.marionette.subrouter'
         },
 
         hbs: {

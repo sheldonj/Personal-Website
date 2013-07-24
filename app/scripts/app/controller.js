@@ -6,17 +6,21 @@ define(['backbone', 'communicator'],
         var MainController = Backbone.Marionette.Controller.extend({
 
             initialize: function(options){
+                this.options = options;
                 this.contentRegion = options.contentRegion;
                 this.navRegion = options.navRegion;
+
             },
 
             home: function(){
                 var self = this;
 
                 self._before(function(){
-                    require(['app/home/views/home'], function(HomeView) {
-                        var homeView = new HomeView();
-                        self.contentRegion.loadView(homeView);
+                    //create home subroutes/controller
+                    require(['app/home/router', 'app/home/controller'], function(HomeRouter, Controller) {
+                        new HomeRouter("home", {
+                            controller: new Controller(self.options)
+                        });
                     });
                 });
 

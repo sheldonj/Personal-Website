@@ -1,17 +1,29 @@
 /*global define, $*/
 
-define([ 'backbone', 'communicator', 'underscore', 'templates'],
+define([ 'backbone', 'communicator', 'underscore', 'templates', 'utils/transitionRegion'],
 
-    function(Backbone, Communicator, _, Templates){
+    function(Backbone, Communicator, _, Templates, TransitionRegion){
         "use strict";
 
         return Backbone.Marionette.Layout.extend({
 
-            template: Templates.home,
+            template: Templates.home.layout,
             className: 'home-container region-container',
 
             regions: {
-                rotator: '.content-blocks'
+                rotator: '.content-blocks',
+                tabPlaceholder: {
+                    'selector': '.content-tab-placeholder',
+                    regionType: TransitionRegion
+                },
+                hexTabs: {
+                    'selector': '.hex-tabs'
+                }
+            },
+
+            loadSubView: function(view){
+                var self = this;
+                self.tabPlaceholder.loadView(view);
             },
 
             transitionIn: function(){

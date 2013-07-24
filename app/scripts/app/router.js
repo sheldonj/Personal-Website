@@ -8,6 +8,7 @@ define(['backbone', 'communicator'], function(Backbone, Communicator) {
             ''      : 'home',
             '/'     : 'home',
             'home'     : 'home',
+            'home/*path'     : 'home',
             'about'      : 'about',
             'work'      : 'work',
             'play'      : 'play',

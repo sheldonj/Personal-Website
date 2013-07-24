@@ -297,6 +297,15 @@
        -o-transform: translate(@x, @y);
           transform: translate(@x, @y);
 }
+
+.transform(@trans) {
+  -webkit-transform:rotate(@trans);
+    -moz-transform:rotate(@trans);
+    -ms-transform:rotate(@trans);
+    -o-transform:rotate(@trans);
+    transform:rotate(@trans);
+}
+
 .skew(@x, @y) {
   -webkit-transform: skew(@x, @y);
      -moz-transform: skew(@x, @y);
