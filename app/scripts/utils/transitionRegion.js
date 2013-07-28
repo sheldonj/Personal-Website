@@ -44,8 +44,14 @@ define(['backbone', 'communicator', 'underscore'],
                 }).done(function () {
 
                     _.each(self.loadedViews, function(loadedView){
-                        $(loadedView.el).unbind().remove();
+
+                        // call 'close' or 'remove', depending on which is found
+                        if (loadedView.close) { loadedView.close(); }
+                        else if (loadedView.remove) { loadedView.remove(); }
+
                     });
+
+                    Backbone.Marionette.triggerMethod.call(self, "close");
 
                     self.loadedViews = [];
                     self.loadedViews.push(view);

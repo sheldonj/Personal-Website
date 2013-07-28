@@ -46,9 +46,26 @@
     .scale(0.9);
     .transition(1s);
 
+    .teaser{
+      background: #000000;
+      height: 40px;
+      position: relative;
+      top: 50%;
+      line-height: 40px;
+      .opacity(0);
+      .transition(1s);
+    }
+
     &:hover{
       .scale(1);
+
+      .teaser{
+        //top: 40%;
+        .opacity(90);
+      }
     }
+
+
 
 
     > a, > div {
