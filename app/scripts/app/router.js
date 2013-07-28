@@ -9,7 +9,10 @@ define(['backbone', 'communicator'], function(Backbone, Communicator) {
             '/'     : 'home',
             'home'     : 'home',
             'home/*path'     : 'home',
+
             'about'      : 'about',
+            'about/*path'      : 'about',
+
             'work'      : 'work',
             'play'      : 'play',
             'skills'      : 'skills',

@@ -31,11 +31,19 @@ define(['backbone', 'communicator'],
             about: function(){
                 var self = this;
                 self._before(function(){
-                    require(['app/about/views/about'], function(AboutView) {
-                        var aboutView = new AboutView();
-                        self.contentRegion.loadView(aboutView);
+                    //create home subroutes/controller
+                    require(['app/about/router', 'app/about/controller'], function(Router, Controller) {
+                        var controller = new Controller(self.options)
+                        new Router("about", {
+                            controller: controller
+                        });
+                        controller.default();
                     });
                 });
+
+
+
+
             },
 
             skills: function(){
