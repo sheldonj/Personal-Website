@@ -1,28 +1,27 @@
-var portfolio = {
-
+exports.content = {
 
     /**
      * ABOUT PAGE
      */
-	about:{
+    about:{
 
         /**
          * Main content that will be displayed on the about section of the website.
          * Just some bullshit about who I am, where I cam from, and hopefully where I'm heading.
          */
         bio:  'My name is James Sheldon. I am a web developer, programmer, and an early adopter. ' +
-              'I work out of my home office in Calgary as a freelance developer, where I make a living creating things on the Internet. ' +
-              'As a developer, I am passionate about innovation, clean code, usability, and pushing the limits of the browser. '+
-              'My specialty is building rich internet applications using HTML, CSS, and Javascript. '+
-              'With the ever changing landscape of Javascript, HTML5 and CSS3 I pride myself on striking a balance between ' +
-              'dancing on the bleeding edge of innovation and respecting conventions of the past. ' +
-              'I attended Mount Royal College and did the whole Bachelor of Communications thing. ' +
-              'Since then I have had some interesting experiences working in house, for an ad agency, investor relations company, ' +
-              'software studio, and interactive shop as well as freelancing on my own. I collect keyboards, and battle a small ' +
-              'addiction to video games. In the summers I love to hang out on patios and in the winters I snowboard ' +
-              'and volunteer for the Special Olympics as a swimming coach. I have a demon child of a puppy named Maple, ' +
-              'who I love as much as the syrup. I was recently married to my beautiful wife Chelsea and we are expecting our ' +
-              'first born very shortly and we are both very exciting about starting that chapter of our lives.',
+            'I work out of my home office in Calgary as a freelance developer, where I make a living creating things on the Internet. ' +
+            'As a developer, I am passionate about innovation, clean code, usability, and pushing the limits of the browser. '+
+            'My specialty is building rich internet applications using HTML, CSS, and Javascript. '+
+            'With the ever changing landscape of Javascript, HTML5 and CSS3 I pride myself on striking a balance between ' +
+            'dancing on the bleeding edge of innovation and respecting conventions of the past. ' +
+            'I attended Mount Royal College and did the whole Bachelor of Communications thing. ' +
+            'Since then I have had some interesting experiences working in house, for an ad agency, investor relations company, ' +
+            'software studio, and interactive shop as well as freelancing on my own. I collect keyboards, and battle a small ' +
+            'addiction to video games. In the summers I love to hang out on patios and in the winters I snowboard ' +
+            'and volunteer for the Special Olympics as a swimming coach. I have a demon child of a puppy named Maple, ' +
+            'who I love as much as the syrup. I was recently married to my beautiful wife Chelsea and we are expecting our ' +
+            'first born very shortly and we are both very exciting about starting that chapter of our lives.',
 
         /**
          * This will show as a subsection of the about 'page'.
@@ -172,7 +171,7 @@ var portfolio = {
      * WORK PAGE
      * This section is just to communicate the type of work I've already done, etc.
      */
-	work: {
+    work: {
 
         /**
          * This is where I will talk about my areas of focus and proficiencies.
@@ -260,7 +259,7 @@ var portfolio = {
             },
             {
                 title: 'Science Alberta - Hidden Objects',
-                description: ''
+                description: '',
                 employer: 'Sajak & Farki',
                 url:'',
                 date :'',
@@ -381,7 +380,7 @@ var portfolio = {
             {
                 name: 'Automated Deployments',
                 description: ''
-            },
+            }
         ]
     },
 
@@ -412,5 +411,5 @@ var portfolio = {
         expiriments:[]
 
     }
-	
-}
+
+};

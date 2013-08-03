@@ -9,7 +9,7 @@ var baucis = require('baucis');
 var faye = require('faye');
 var socketIO = require('socket.io');
 var mongoose = require('mongoose');
-
+var content = require('./james');
 
 // start mongoose
 mongoose.connect('mongodb://localhost/sit');
@@ -51,7 +51,15 @@ db.once('open', function callback () {
 	app.use(express.static( path.join( __dirname, '../app') ));
 	app.use(express.static( path.join( __dirname, '../.tmp') ));
 
+    app.get('/content', function(req, res){
 
+        res.json(content.content);
+    });
+
+    app.get('/content/source', function(req, res){
+
+        res.sendfile( path.join( __dirname, 'james.js' ) );
+    });
 
 	// route index.html
 	app.get('*', function(req, res){
