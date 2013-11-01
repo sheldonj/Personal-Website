@@ -8,15 +8,15 @@ var hbs = require('express-hbs');
 var baucis = require('baucis');
 var faye = require('faye');
 var socketIO = require('socket.io');
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 var content = require('./james');
 
 // start mongoose
-mongoose.connect('mongodb://localhost/sit');
-var db = mongoose.connection;
+//mongoose.connect('mongodb://localhost/sit');
+//var db = mongoose.connection;
 
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function callback () {
+//db.on('error', console.error.bind(console, 'connection error:'));
+//db.once('open', function callback () {
 
 	/* test schema */
     var testSchema = new mongoose.Schema({
@@ -70,6 +70,6 @@ db.once('open', function callback () {
 	http.createServer(app).listen(app.get('port'), function(){
 	    console.log('Express App started!');
 	});
-});
+//});
 
 
