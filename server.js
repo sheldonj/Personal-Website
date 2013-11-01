@@ -47,7 +47,6 @@ var faye = require('faye');
 
 	// mount static
 	app.use(express.static( path.join( __dirname, 'app') ));
-    app.use(express.static( path.join( __dirname, 'dist') ));
 	app.use(express.static( path.join( __dirname, '../.tmp') ));
 
 //    app.get('/content', function(req, res){
@@ -62,7 +61,7 @@ var faye = require('faye');
 
 	// route index.html
 	app.get('/', function(req, res){
-	  res.sendfile( path.join( __dirname, 'dist/index.html' ) );
+	  res.sendfile( path.join( __dirname, 'app/index.html' ) );
 	});
 
 	// start server
