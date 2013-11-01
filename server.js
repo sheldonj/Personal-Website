@@ -7,9 +7,7 @@ var async = require('async');
 var hbs = require('express-hbs');
 var baucis = require('baucis');
 var faye = require('faye');
-var socketIO = require('socket.io');
-//var mongoose = require('mongoose');
-var content = require('./data');
+//var content = require('./data');
 
 // start mongoose
 //mongoose.connect('mongodb://localhost/sit');
@@ -19,16 +17,16 @@ var content = require('./data');
 //db.once('open', function callback () {
 
 	/* test schema */
-    var testSchema = new mongoose.Schema({
-        test: String
-    });
+//    var testSchema = new mongoose.Schema({
+//        test: String
+//    });
 
     //var Test = mongoose.model( 'test', testSchema );
 
     /* set Baucis */
-    baucis.rest({
-        singular: 'test'
-    });
+//    baucis.rest({
+//        singular: 'test'
+//    });
 
 	var app = express();
 
@@ -39,27 +37,27 @@ var content = require('./data');
 	    app.set('views', __dirname + 'app/scripts/views');
 	});
 
-    app.use('/api/v1', baucis());
+//    app.use('/api/v1', baucis());
 
 	// simple log
-	app.use(function(req, res, next){
-	  console.log('%s %s', req.method, req.url);
-	  next();
-	});
+	//app.use(function(req, res, next){
+//	  console.log('%s %s', req.method, req.url);
+//	  next();
+//	});
 
 	// mount static
 	app.use(express.static( path.join( __dirname, 'app') ));
 	app.use(express.static( path.join( __dirname, '../.tmp') ));
 
-    app.get('/content', function(req, res){
-
-        res.json(content.content);
-    });
-
-    app.get('/content/source', function(req, res){
-
-        res.sendfile( path.join( __dirname, 'data.js' ) );
-    });
+//    app.get('/content', function(req, res){
+//
+//        res.json(content.content);
+//    });
+//
+//    app.get('/content/source', function(req, res){
+//
+//        res.sendfile( path.join( __dirname, 'data.js' ) );
+//    });
 
 	// route index.html
 	app.get('*', function(req, res){
