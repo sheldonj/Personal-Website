@@ -33,8 +33,8 @@ var faye = require('faye');
 	app.configure(function(){
 	    app.set('port', process.env.PORT || 9000);
 
-	    app.set('view engine', 'handlebars');
-	    app.set('views', __dirname + 'app/scripts/views');
+//	    app.set('view engine', 'handlebars');
+//	    app.set('views', __dirname + 'app/scripts/views');
 	});
 
 //    app.use('/api/v1', baucis());
@@ -47,6 +47,7 @@ var faye = require('faye');
 
 	// mount static
 	app.use(express.static( path.join( __dirname, 'app') ));
+    app.use(express.static( path.join( __dirname, 'dist') ));
 	app.use(express.static( path.join( __dirname, '../.tmp') ));
 
 //    app.get('/content', function(req, res){
@@ -60,8 +61,8 @@ var faye = require('faye');
 //    });
 
 	// route index.html
-	app.get('*', function(req, res){
-	  res.sendfile( path.join( __dirname, 'app/index.html' ) );
+	app.get('/', function(req, res){
+	  res.sendfile( path.join( __dirname, 'dist/index.html' ) );
 	});
 
 	// start server
