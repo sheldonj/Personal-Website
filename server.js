@@ -33,7 +33,7 @@ var content = require('./james');
 	var app = express();
 
 	app.configure(function(){
-	    app.set('port', 9000);
+	    app.set('port', process.env.PORT || 9000);
 
 	    app.set('view engine', 'handlebars');
 	    app.set('views', __dirname + '../app/scripts/views');
